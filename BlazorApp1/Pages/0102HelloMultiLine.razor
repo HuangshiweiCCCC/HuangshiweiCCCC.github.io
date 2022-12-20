@@ -1,0 +1,22 @@
+﻿@page "/0102hellomultiline"
+
+<PageTitle>Hello World multi line</PageTitle>
+
+<br/>
+<button @onclick="SayHello">Say Hello</button>
+<br/>
+<br/>
+<div style="border:solid; border-color:black">
+  <pre>@message</pre>
+</div>
+
+@code {
+    private string message = "";
+
+    private void SayHello()
+    {
+        message = "Hello world!!!" + Environment.NewLine 
+            + "Greetings from IMBI DSS";
+        System.Console.WriteLine("Value for the variable message is set to " + message);
+    }
+}

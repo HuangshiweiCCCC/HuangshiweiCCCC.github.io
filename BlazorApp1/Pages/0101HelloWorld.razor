@@ -1,0 +1,18 @@
+﻿@page "/0101helloworld"
+
+<PageTitle>Hello World</PageTitle>
+
+<br/>
+<button @onclick="SayHello">Say Hello</button>
+<br />
+<br />
+<p>@message</p>
+
+@code {
+    private string message = "";
+
+    private void SayHello()
+    {
+        message = message+"Hello world!!!";
+    }
+}
